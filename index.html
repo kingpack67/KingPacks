@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="KingPacks — ресурс-паки для Minecraft. Превью, версии и бесплатное скачивание.">
+<title>KingPacks — Minecraft Resource Packs</title>
+<style>
+:root{--bg:#080d0a;--panel:#111a14;--panel2:#17231a;--green:#8bea75;--green2:#4fbd55;--muted:#a6b4a8;--line:#26372a}
+*{box-sizing:border-box}body{margin:0;background:radial-gradient(ellipse at 50% -20%,#1b3b20 0,transparent 45%),var(--bg);color:#f1f7f1;font-family:system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif}
+a{color:inherit;text-decoration:none}.wrap{width:min(1100px,calc(100% - 32px));margin:auto}
+header{border-bottom:1px solid var(--line);background:#080d0adf;position:sticky;top:0;backdrop-filter:blur(12px);z-index:5}
+.nav{height:70px;display:flex;align-items:center;justify-content:space-between;gap:16px}.brand{font-size:23px;font-weight:900;letter-spacing:1px}.brand span{color:var(--green)}.nav small{color:var(--muted)}
+.hero{text-align:center;padding:76px 0 48px}.tag{display:inline-block;border:1px solid #3b6d40;color:var(--green);background:#102015;padding:7px 12px;border-radius:999px;font-size:12px;font-weight:800;letter-spacing:1px}
+h1{font-size:clamp(38px,7vw,70px);line-height:1.02;margin:20px 0 14px;letter-spacing:-2px}.hero p{color:var(--muted);font-size:17px;max-width:620px;margin:0 auto 25px;line-height:1.6}
+.btn{display:inline-flex;align-items:center;justify-content:center;padding:12px 18px;border-radius:10px;background:var(--green);color:#0a140b;font-weight:900;border:0;cursor:pointer;transition:.2s}.btn:hover{transform:translateY(-2px);background:#a5f58f}.btn.secondary{background:#223328;color:#eaf5eb;border:1px solid #3b5940}
+.stats{display:flex;justify-content:center;gap:12px;flex-wrap:wrap;margin-top:30px}.stat{background:#101a13;border:1px solid var(--line);border-radius:10px;padding:10px 15px;color:var(--muted);font-size:13px}.stat b{color:#fff}
+.section-head{display:flex;justify-content:space-between;align-items:end;gap:15px;margin:28px 0 18px}.section-head h2{margin:0;font-size:27px}.section-head p{margin:5px 0 0;color:var(--muted);font-size:14px}
+.tools{display:flex;gap:10px;flex-wrap:wrap;margin-bottom:20px}.tools input,.tools select{background:var(--panel);border:1px solid var(--line);color:#fff;padding:12px 13px;border-radius:9px;font:inherit}.tools input{flex:1;min-width:190px}.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:17px}
+.card{background:linear-gradient(145deg,#152119,#0e1510);border:1px solid var(--line);border-radius:15px;overflow:hidden;transition:.2s}.card:hover{transform:translateY(-4px);border-color:#548b58}
+.preview{height:160px;display:grid;place-items:center;background:linear-gradient(135deg,#1d3921,#101810);position:relative;overflow:hidden}.preview:before{content:"";position:absolute;inset:0;background-image:linear-gradient(45deg,#ffffff08 25%,transparent 25%,transparent 75%,#ffffff08 75%),linear-gradient(45deg,#ffffff08 25%,transparent 25%,transparent 75%,#ffffff08 75%);background-position:0 0,12px 12px;background-size:24px 24px}.cube{font-size:56px;filter:drop-shadow(0 8px 10px #0009);z-index:1}.preview img{width:100%;height:100%;object-fit:cover;position:absolute;inset:0}
+.card-body{padding:16px}.card h3{margin:0 0 7px;font-size:19px}.desc{color:var(--muted);font-size:14px;line-height:1.5;min-height:42px}.meta{display:flex;gap:7px;flex-wrap:wrap;margin:13px 0}.pill{font-size:11px;background:#203127;color:#cce8ce;border:1px solid #34543a;padding:5px 8px;border-radius:999px}.card .btn{width:100%;margin-top:3px}.empty{grid-column:1/-1;padding:35px;text-align:center;border:1px dashed #3b5940;border-radius:12px;color:var(--muted)}
+.notice{margin:28px 0;background:#101a13;border:1px solid var(--line);padding:18px;border-radius:12px;color:var(--muted);line-height:1.6}.notice b{color:#fff}
+footer{border-top:1px solid var(--line);margin-top:60px;padding:26px 0;color:var(--muted);font-size:13px;text-align:center}
+@media(max-width:800px){.grid{grid-template-columns:repeat(2,1fr)}}@media(max-width:540px){.grid{grid-template-columns:1fr}.hero{padding:55px 0 35px}.nav small{display:none}.section-head{align-items:start;flex-direction:column}}
+</style>
+</head>
+<body>
+<header><div class="wrap nav"><a class="brand" href="#">KING<span>PACKS</span></a><small>MINECRAFT RESOURCE PACKS</small><a class="btn secondary" href="#packs">Каталог</a></div></header>
+<main class="wrap">
+<section class="hero">
+  <span class="tag">✦ MINECRAFT RESOURCE PACKS</span>
+  <h1>Прокачай свой<br><span style="color:var(--green)">Minecraft</span></h1>
+  <p>Подборка ресурс-паков для PvP, выживания и красивого мира. Выбирай понравившийся пак и скачивай бесплатно.</p>
+  <a class="btn" href="#packs">Смотреть ресурс-паки ↓</a>
+  <div class="stats"><div class="stat"><b id="count">0</b> паков в каталоге</div><div class="stat"><b>Бесплатно</b> для скачивания</div><div class="stat"><b>KingPacks</b> community</div></div>
+</section>
+<section id="packs">
+ <div class="section-head"><div><h2>Каталог ресурс-паков</h2><p>Найди подходящий стиль для своей игры.</p></div></div>
+ <div class="tools"><input id="search" type="search" placeholder="Поиск по названию..."><select id="version"><option value="">Все версии</option><option>1.21.11</option><option>1.21</option><option>1.20.4</option><option>1.20</option><option>Другая</option></select></div>
+ <div class="grid" id="grid"></div>
+</section>
+<div class="notice"><b>Как добавить свои ресурс-паки?</b><br>
+1. Положи ZIP-файл пака в папку <code>packs</code>.<br>
+2. Открой файл <code>index.html</code> в редакторе и найди массив <code>const packs</code> внизу страницы.<br>
+3. Добавь туда карточку: название, описание, версию и путь к ZIP-файлу. Для превью можно указать ссылку на картинку в поле <code>image</code>.<br>
+4. Загрузи обновлённую папку сайта на GitHub Pages. Не распаковывай сам ресурс-пак — посетители скачивают ZIP.
+</div>
+</main>
+<footer><div class="wrap">© <span id="year"></span> KingPacks · Неофициальный фан-сайт. Minecraft принадлежит Mojang/Microsoft.</div></footer>
+<script>
+/* ДОБАВЛЯЙ СВОИ ПАКИ В ЭТОТ СПИСОК.
+   zip — путь к ZIP-файлу внутри папки сайта.
+   image — необязательная ссылка на картинку-превью. */
+const packs = [
+  // Пример:
+  // { name:"My PvP Pack", description:"Лёгкий пак для PvP.", version:"1.21.11", category:"PvP", zip:"packs/my-pvp-pack.zip", image:"images/preview.jpg" }
+];
+const grid=document.getElementById('grid'), search=document.getElementById('search'), version=document.getElementById('version');
+function render(){
+ const q=search.value.toLowerCase().trim(), v=version.value;
+ const filtered=packs.filter(p=>(p.name+" "+p.description+" "+p.category).toLowerCase().includes(q)&&(!v||p.version===v));
+ document.getElementById('count').textContent=packs.length;
+ if(!filtered.length){grid.innerHTML='<div class="empty">'+(packs.length?'Ничего не найдено. Попробуй изменить поиск или версию.':'Каталог пока пуст. Добавь свои ZIP-файлы и карточки в массив <code>packs</code> в index.html.')+'</div>';return}
+ grid.innerHTML=filtered.map(p=>`<article class="card"><div class="preview">${p.image?`<img src="${p.image}" alt="Превью ${escapeHtml(p.name)}">`:'<span class="cube">🟩</span>'}</div><div class="card-body"><h3>${escapeHtml(p.name)}</h3><div class="desc">${escapeHtml(p.description)}</div><div class="meta"><span class="pill">Minecraft ${escapeHtml(p.version)}</span><span class="pill">${escapeHtml(p.category||'Resource Pack')}</span></div><a class="btn" href="${safeUrl(p.zip)}" download>↓ Скачать ZIP</a></div></article>`).join('');
+}
+function escapeHtml(s){return String(s??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));}
+function safeUrl(s){return String(s||'#').replace(/["'<>\s]/g,'');}
+search.addEventListener('input',render);version.addEventListener('change',render);
+document.getElementById('year').textContent=new Date().getFullYear();render();
+</script>
+</body></html>
